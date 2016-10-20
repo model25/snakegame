@@ -14,28 +14,30 @@ namespace SnakeGame
 	{
 		public static void Main(string[] args)
 		{
-			int x1 = 1;
-			int y1 = 3;
-			char symbol1 = '*';
-			
-		    int x2 = 4;
-			int y2 = 5;
-			char symbol2 = '#';			
+		
 			Console.Write("Hello to SnakeGame !!!");
 			
-
+			Point p1 = new Point();
+			Point p2 = new Point();
+			
+			
+			p1.x = 1;
+			p1.y = 3;
+			p1.symbol = '*';
+			
+			
+			p2.x = 3;
+			p2.y = 5;
+			p2.symbol = '#';
+			
+			
+			p1.DrawPoint();
+			p2.DrawPoint();
+			
 			// TODO: Implement Functionality Here
-			
-			DrawSymbol(x1,y1,symbol1);
-			DrawSymbol(x2,y2,symbol2);
-			
+
 			Console.ReadKey(true);
 		}
-		
-		static void DrawSymbol(int x,int y,char symbol)
-		{
-			Console.SetCursorPosition(x,y);
-			Console.Write(symbol);
-		}
+
 	}
 }
