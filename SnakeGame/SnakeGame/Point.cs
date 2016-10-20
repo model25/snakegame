@@ -31,11 +31,39 @@ namespace SnakeGame
 			// конструктор по умолчанию
 		}
 		
+		public Point(Point p)
+		{
+			// конструктор копирования
+			x= p.x;
+			y= p.y;
+			symbol = p.symbol;
+		}
+				
 		public Point(int _x, int _y, char _symbol)
 		{
 			this.x = _x;
 			this.y = _y;
 			this.symbol = _symbol;
+		}
+		
+		public void Move(int offset, Direction dir)
+		{
+			if (dir == Direction.RIGHT) {
+				x += offset;
+			}
+			else if(dir == Direction.LEFT)
+			{
+				x-= offset;
+			}
+			
+			else if (dir == Direction.DOWN) {
+				y+= offset;
+			}
+			
+			else if(dir == Direction.UP)
+			{
+				y-= offset;
+			}
 		}
 	}
 }

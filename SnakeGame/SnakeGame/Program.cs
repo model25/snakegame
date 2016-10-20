@@ -15,7 +15,8 @@ namespace SnakeGame
 	{
 		public static void Main(string[] args)
 		{
-		
+			//Console.SetBufferSize(100,100);
+			
 			List<int> numlist = new List<int>();
 			
 			Console.Write("Hello to SnakeGame !!!");
@@ -26,14 +27,17 @@ namespace SnakeGame
 			p1.DrawPoint();
 			p2.DrawPoint();
 			
-			HorizontalLine pxline = new HorizontalLine(5,20,8,'+');
+			HorizontalLine pxline = new HorizontalLine(5,20,8,'-');
 			pxline.DrawLine();
 			
 			
-			VerticalLine pyline = new VerticalLine(5,8,30,'+');
+			VerticalLine pyline = new VerticalLine(5,8,30,'|');
 			pyline.DrawLine();
 			// TODO: Implement Functionality Here
-
+			
+			Point p = new Point(4,5,'*');
+			Snake snake = new Snake(p, 10, Direction.RIGHT);
+			snake.DrawLine();
 			Console.ReadKey(true);
 		}
 

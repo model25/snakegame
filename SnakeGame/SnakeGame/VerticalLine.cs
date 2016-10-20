@@ -14,9 +14,9 @@ namespace SnakeGame
 	/// <summary>
 	/// Description of VerticalLine.
 	/// </summary>
-	public class VerticalLine
+	public class VerticalLine : Figure
 	{
-		List<Point> pList;
+
 		
 		public VerticalLine()
 		{
@@ -33,12 +33,5 @@ namespace SnakeGame
 			}
 		}
 		
-		public void DrawLine()
-		{
-			foreach (Point p in pList) 
-			{
-				p.DrawPoint();
-			}			
-		}
 	}
 }

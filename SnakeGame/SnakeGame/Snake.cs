@@ -2,7 +2,7 @@
  * Created by SharpDevelop.
  * User: User
  * Date: 20.10.2016
- * Time: 15:34
+ * Time: 16:15
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
@@ -12,26 +12,27 @@ using System.Collections.Generic;
 namespace SnakeGame
 {
 	/// <summary>
-	/// Description of HorizontalLine.
+	/// Description of Snake.
 	/// </summary>
-	public class HorizontalLine : Figure
+	public class Snake : Figure
 	{
+		Direction dir;
 		
-		public HorizontalLine()
+		public Snake()
 		{
-
 		}
 		
-		public HorizontalLine(int xLeft,int xRight,int y,char symbol)
+		public Snake(Point tail,int length, Direction _dir)
 		{
+			dir = _dir;
 			pList = new List<Point>();
 			
-			for (int x = xLeft; x <= xRight; x++) 
+			for (int i = 0; i < length; i++) 
 			{
-				Point p = new Point(x,y,symbol);
+				Point p = new Point(tail);
+				p.Move(i,dir);
 				pList.Add(p);
 			}
 		}
-		
 	}
 }
