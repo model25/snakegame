@@ -1,0 +1,6 @@
+C:\Downloads\CProj\snakegame\SnakeGame\SnakeGame\bin\Debug\SnakeGame.exe.config
+C:\Downloads\CProj\snakegame\SnakeGame\SnakeGame\bin\Debug\SnakeGame.exe
+C:\Downloads\CProj\snakegame\SnakeGame\SnakeGame\bin\Debug\SnakeGame.pdb
+C:\Downloads\CProj\snakegame\SnakeGame\SnakeGame\obj\Debug\SnakeGame.csprojResolveAssemblyReference.cache
+C:\Downloads\CProj\snakegame\SnakeGame\SnakeGame\obj\Debug\SnakeGame.exe
+C:\Downloads\CProj\snakegame\SnakeGame\SnakeGame\obj\Debug\SnakeGame.pdb
