@@ -34,16 +34,16 @@ namespace SnakeGame
 		public Point(Point p)
 		{
 			// конструктор копирования
-			x= p.x;
-			y= p.y;
+			x = p.x;
+			y = p.y;
 			symbol = p.symbol;
 		}
 				
 		public Point(int _x, int _y, char _symbol)
 		{
-			this.x = _x;
-			this.y = _y;
-			this.symbol = _symbol;
+			x = _x;
+			y = _y;
+			symbol = _symbol;
 		}
 		
 		public void Move(int offset, Direction dir)
@@ -53,10 +53,10 @@ namespace SnakeGame
 			}
 			else if(dir == Direction.LEFT)
 			{
-				x-= offset;
+				x -= offset;
 			}
 			
-			else if (dir == Direction.DOWN) {
+			else if(dir == Direction.DOWN) {
 				y+= offset;
 			}
 			
@@ -64,6 +64,12 @@ namespace SnakeGame
 			{
 				y-= offset;
 			}
+		}
+		
+		public void Clear()
+		{
+			symbol = ' ';
+			DrawPoint();
 		}
 	}
 }

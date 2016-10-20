@@ -8,6 +8,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace SnakeGame
 {
@@ -38,7 +39,30 @@ namespace SnakeGame
 			Point p = new Point(4,5,'*');
 			Snake snake = new Snake(p, 10, Direction.RIGHT);
 			snake.DrawLine();
-			Console.ReadKey(true);
+			
+			while (true)  
+			{
+				if (Console.KeyAvailable) {
+				ConsoleKeyInfo key = Console.ReadKey();
+				
+				if (key.Key == ConsoleKey.LeftArrow) {
+					snake.dir = Direction.LEFT;
+				}
+				else if (key.Key == ConsoleKey.RightArrow) {
+					snake.dir = Direction.RIGHT;
+				}
+				else if (key.Key == ConsoleKey.DownArrow) {
+					snake.dir = Direction.DOWN;
+				}
+				else if (key.Key == ConsoleKey.UpArrow) {
+					snake.dir = Direction.UP;
+				}
+				
+				}
+				
+				Thread.Sleep(100);
+				snake.Move();
+			}
 		}
 
 	}

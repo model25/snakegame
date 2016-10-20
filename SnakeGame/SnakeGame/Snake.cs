@@ -8,6 +8,9 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
 
 namespace SnakeGame
 {
@@ -16,7 +19,7 @@ namespace SnakeGame
 	/// </summary>
 	public class Snake : Figure
 	{
-		Direction dir;
+		public Direction dir;
 		
 		public Snake()
 		{
@@ -33,6 +36,25 @@ namespace SnakeGame
 				p.Move(i,dir);
 				pList.Add(p);
 			}
+		}
+		
+		internal void Move()
+		{
+			Point tail = pList.First();
+			pList.Remove(tail);
+			Point head  = GetNextPoint();
+			pList.Add(head);
+			
+			tail.Clear();
+			head.DrawPoint();
+		}
+		
+		public Point GetNextPoint()
+		{
+			Point head = pList.Last();
+			Point nextPoint = new Point(head);
+			nextPoint.Move(1,dir);
+			return nextPoint;
 		}
 	}
 }
