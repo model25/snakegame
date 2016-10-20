@@ -17,10 +17,10 @@ namespace SnakeGame
 		
 			Console.Write("Hello to SnakeGame !!!");
 			
-			Point p1 = new Point();
-			Point p2 = new Point();
+			Point p1 = new Point(1,3,'*');
+			Point p2 = new Point(3,5,'#');
 			
-			
+	/*		
 			p1.x = 1;
 			p1.y = 3;
 			p1.symbol = '*';
@@ -30,7 +30,7 @@ namespace SnakeGame
 			p2.y = 5;
 			p2.symbol = '#';
 			
-			
+	*/		
 			p1.DrawPoint();
 			p2.DrawPoint();
 			

@@ -28,7 +28,14 @@ namespace SnakeGame
 		
 		public Point()
 		{
-			//
+			// конструктор по умолчанию
+		}
+		
+		public Point(int _x, int _y, char _symbol)
+		{
+			this.x = _x;
+			this.y = _y;
+			this.symbol = _symbol;
 		}
 	}
 }
